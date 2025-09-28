@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Coming Soon • Crank Bird</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A simple, fast, and accessible holding page. Something new is on the way." />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Coming Soon • Crank Bird" />
+    <meta property="og:description" content="Something new is on the way." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og-image.png" />
+    <meta property="og:url" content="https://crankbird.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.png" />
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --fg: #e6e6e6;
+            --muted: #b9bec7;
+            --brand: #5ec2ff;
+            --card: #121621;
+            --btn-bg: #ffffff;
+            --btn-fg: #0b0e14;
+            --ring: rgba(94, 194, 255, .45);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #ffffff;
+                --fg: #101318;
+                --muted: #4c5562;
+                --brand: #006adc;
+                --card: #f5f7fb;
+                --btn-bg: #101318;
+                --btn-fg: #ffffff;
+                --ring: rgba(0, 106, 220, .35);
+            }
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(1200px 800px at 80% -10%, rgba(94, 194, 255, .12), transparent 60%),
+                radial-gradient(1000px 700px at -10% 110%, rgba(94, 194, 255, .10), transparent 55%),
+                var(--bg);
+            color: var(--fg);
+            font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: grid;
+            place-items: center;
+            padding: clamp(16px, 4vw, 32px);
+        }
+
+        .wrap {
+            width: min(720px, 100%);
+            background: color-mix(in hsl, var(--card) 92%, transparent);
+            border: 1px solid color-mix(in hsl, var(--fg) 12%, transparent);
+            border-radius: 16px;
+            padding: clamp(20px, 5vw, 40px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: #fff3;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain
+        }
+
+        h1 {
+            font-size: clamp(20px, 3.2vw, 32px);
+            line-height: 1.2;
+            margin: 0;
+            letter-spacing: .2px;
+        }
+
+        .tag {
+            color: var(--muted);
+            margin-top: 4px;
+            font-size: clamp(14px, 2.2vw, 16px);
+        }
+
+        .card {
+            margin-top: 20px;
+            background: color-mix(in hsl, var(--card) 85%, transparent);
+            border: 1px dashed color-mix(in hsl, var(--fg) 16%, transparent);
+            border-radius: 14px;
+            padding: clamp(16px, 3.6vw, 22px);
+        }
+
+        p {
+            margin: 0 0 10px 0
+        }
+
+        .cta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+        }
+
+        .btn {
+            appearance: none;
+            border: 0;
+            cursor: pointer;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: var(--btn-bg);
+            color: var(--btn-fg);
+            font-weight: 600;
+            letter-spacing: .2px;
+            transition: transform .06s ease, box-shadow .06s ease;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, .25);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px)
+        }
+
+        .btn:active {
+            transform: translateY(0)
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: var(--fg);
+            border: 1px solid color-mix(in hsl, var(--fg) 22%, transparent);
+            box-shadow: none;
+        }
+
+        .note {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        a {
+            color: var(--brand);
+            text-decoration: none
+        }
+
+        a:focus,
+        .btn:focus {
+            outline: 3px solid var(--ring);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap" role="main">
+        <header>
+            <div class="logo" aria-hidden="true">
+                <img src="assets/logo.svg" alt="Site logo" />
+            </div>
+            <div>
+                <h1>Something new is on the way</h1>
+                <div class="tag">Thoughtful tech, clear strategy, radical transparency</div>
+            </div>
+        </header>
+
+        <section class="card" aria-label="About">
+            <p>Thanks for stopping by. I am rebuilding this site and a few related projects. If you are here for work
+                related to AI strategy, explainable tooling, or advisory services, you can reach me directly.</p>
+            <div class="cta">
+                <a class="btn" href="mailto:crank.bird@crankbird.com?subject=Inquiry%20from%20website">Email me</a>
+                <a class="btn secondary" href="https://www.linkedin.com/in/johnmartinit/" rel="me">LinkedIn</a>
+                <a class="btn secondary" href="https://github.com/crankbird" rel="me">GitHub</a>
+            </div>
+            <p class="note">You can also follow progress in the repo. I keep decisions and changes versioned and
+                visible.</p>
+        </section>
+
+        <footer>
+            <div>&copy; <span id="y"></span> Crank Bird</div>
+            <div><a href="https://github.com/crankbird.com">View source</a></div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
